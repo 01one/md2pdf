@@ -1,0 +1,8 @@
+services:
+  python-app-md2pdf-server:
+    build: .
+    volumes:
+      - ./app:/app
+    ports:
+       - "127.0.0.1:8800:5000"
+    restart: always
