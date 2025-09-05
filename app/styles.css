@@ -1,0 +1,169 @@
+@page {
+    size: A4 portrait;
+    margin: 2.54cm 1.91cm;
+    
+    @top-center {
+        content: counter(page);
+        font-family: "Times New Roman", Times, serif;
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, "Liberation Serif", serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000000;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    hyphens: auto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    page-break-after: avoid;
+    line-height: 1.2;
+}
+
+h1 { /* Chapter titles */
+    font-size: 18pt;
+    margin-top: 0;
+    margin-bottom: 24pt;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    page-break-before: always;
+}
+
+h2 { /* Section headings */
+    font-size: 14pt;
+    margin-top: 36pt;
+    margin-bottom: 12pt;
+}
+
+h3 { /* Subsection headings */
+    font-size: 12pt;
+    margin-top: 24pt;
+    margin-bottom: 9pt;
+}
+
+h4 { /* Sub-subsection headings */
+    font-size: 11pt;
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+    font-style: italic;
+}
+
+/* --- Paragraphs and Links --- */
+p {
+    margin-bottom: 12pt;
+    text-indent: 0 !important;
+    widows: 2;
+    orphans: 2;
+}
+
+p + p {
+    text-indent: 1.5em !important;
+    margin-top: 0;
+}
+
+a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* --- Lists --- */
+ul, ol {
+    margin-bottom: 12pt;
+    padding-left: 24pt;
+}
+
+li {
+    margin-bottom: 6pt;
+}
+
+/* --- Tables --- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 18pt 0;
+    font-size: 10pt;
+    border: 1pt solid #000000;
+    page-break-inside: avoid;
+}
+
+th, td {
+    border: 0.5pt solid #000000;
+    padding: 8pt 10pt;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1pt solid #000000;
+}
+
+/* --- Code Blocks and Inline Code --- */
+pre {
+    background-color: #f8f8f8;
+    border: 1pt solid #cccccc;
+    padding: 12pt;
+    margin: 18pt 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 9pt;
+    line-height: 1.4;
+    page-break-inside: avoid;
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f0f0f0;
+    padding: 2pt 4pt;
+    font-size: 9pt;
+    border: 0.5pt solid #cccccc;
+}
+
+pre > code {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+}
+
+/* --- Blockquotes, Images, and Rules --- */
+blockquote {
+    margin: 18pt 24pt;
+    font-style: italic;
+    page-break-inside: avoid;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 18pt auto;
+    page-break-inside: avoid;
+}
+
+hr {
+    border: none;
+    border-top: 1pt solid #000000;
+    margin: 24pt auto;
+    width: 30%;
+}
